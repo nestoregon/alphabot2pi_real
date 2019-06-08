@@ -1,5 +1,5 @@
 # Alphabot2pi ROS real
-This is the code used to run AlphaBot2pi using ROS.
+This is the code used to run AlphaBot2pi using ROS. 2 devices will be used: the raspberryPi inside alphabot2pi AND a computer running Ubuntu. Keep in mind that ROS has to be installed in both devices. The raspberry image used in this project can be found [here](https://downloads.ubiquityrobotics.com/pi.html) with ROS already installed in it.
 
 ## Installation
 
