@@ -15,7 +15,7 @@ git clone https://github.com/nestoregon/alphabot2pi_real/
 ```
 2. Change the name to src. The file downloaded from GitHub has to change its name to src.
 ```
-mv alphabot2pi_real src 
+mv alphabot2pi_real src
 ```
 3. Import raspicam_node to be able to use the camera. This package enables you to publish a stream video into a topic. Only used by the Raspberry camera.
 ```
@@ -37,7 +37,10 @@ cd src/control//src
 ```
 chmod  +x control_robot_node.py find_ball_blue_node.py servo_node.py drive_node.py remote_node.py
 ```
-Type "ls" on the terminal to confirm that all the code is green! This means that we can run the code.
+Type "ls" on the terminal to confirm that all the code is green! This means that we can run the code. You should see something like this:
+```diff
++ $ control_robot_node.py find_ball_blue_node.py servo_node.py drive_node.py remote_node.py
+```
 
 ## Configure /.bashrc files. ROS_MASTER and ROS_URI
 
@@ -116,8 +119,8 @@ There are 2 ways of running the code in the computer. The computer is in charge 
 roslaunch control computer.launch
 ```
 * Option 2: each node is launched independently in a different terminal window. This allows the user to see the internal processes of each node. Run both commands in two separe terminal windows.
-When the find_ball_blue_node.py is launched independently, the user is able to see the images and masks. 
-``` 
+When the find_ball_blue_node.py is launched independently, the user is able to see the images and masks.
+```
 rosrun control find_ball_blue_node.py
 ```
 When the control_robot_node.py is launched independently, the user is able to see the direction of the robot and each mode selected
@@ -135,7 +138,7 @@ In Modes 2 & 3 the robot follows a blue ball. the find_ball_blue_node.py uses th
 
 ## Future work
 You can add as many input and output nodes as you like.
-* Modify the control_robot_node.py code to set new algorithms. The brain of the robot. Set speeds. Set frequency. 
+* Modify the control_robot_node.py code to set new algorithms. The brain of the robot. Set speeds. Set frequency.
 * Modify the remote_node.py node to set new keys and publish new topics
 * Modify the find_ball_blue_node.py to set new values for different colors to find
 
