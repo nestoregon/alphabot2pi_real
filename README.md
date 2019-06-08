@@ -9,23 +9,23 @@ cd alphabot2pi_real_ws
 git clone https://github.com/nestoregon/alphabot2pi_real/
 git clone https://github.com/UbiquityRobotics/raspicam_node.git
 ```
-**Change the name to src**
+Change the name to src
 ```
 mv alphabot2pi_real src 
 ```
-**Create build and devel files**
+Create build and devel files
 ```
 catkin_make
 ```
-**Source the workspace**
+Source the workspace
 ```
 source devel/setup.bash
 ```
-**Go to the directory with control nodes**
+Go to the directory with control nodes
 ```
 cd src/control//src
 ```
-**Make the code executable**
+Make the code executable
 ```
 chmod  +x control_robot_node.py find_ball_blue_node.py servo_node.py drive_node.py remote_node.py
 ```
@@ -38,51 +38,51 @@ To be able to connect the RaspberryPi and the Computer the user must configure b
 The following steps setup the Raspberry as the ROS Master and your computer as a connexion to it. More on how to edit /.bashrc files [here](http://answers.ros.org/question/272065/specification-of-ros_master_uri-and-ros_hostname/)
 
 ### 1. Raspberry /.bashrc (from Computer)
-#### Access Raspberry Remotely
+Access Raspberry Remotely
 
 ```
 ssh ubuntu@ipAddressRaspberry
 ```
-**Open editor for the /.bashrc file**
+Open editor for the /.bashrc file
 ```
 nano ~/.bashrc
 ```
-**Write the following at the bottom of the /.bashrc file**
+Write the following at the bottom of the /.bashrc file
 ```
 # office
 export ROS_MASTER_URI=http://ipAddressRaspberry:11311
 export ROS_IP=ipAddressRaspberry
 ```
-**Save changes**
+Save changes
 ```
 Ctrl + x
 y
 Enter
 ```
-#### Run /.bashrc file again to update changes
+Run /.bashrc file again to update changes
 ```
 source ~/.bashrc
 ```
 
 ### 2. Computer /.bashrc (from Computer)
 
-**Open editor for the /.bashrc file in a new terminal window**
+Open editor for the /.bashrc file in a new terminal window
 ```
 nano ~/.bashrc
 ```
-**Write the following at the bottom of the /.bashrc file**
+Write the following at the bottom of the /.bashrc file
 ```
 # office
 export ROS_MASTER_URI=http://ipAddressRaspberry:11311
 export ROS_IP=ipAddressComputer
 ```
-**Save changes**
+Save changes
 ```
 Ctrl + x
 y
 Enter
 ```
-#### Run /.bashrc file again to update changes
+Run /.bashrc file again to update changes
 ```
 source ~/.bashrc
 ```
