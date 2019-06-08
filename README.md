@@ -13,19 +13,19 @@ mkdir alphabot2pi_real_ws
 cd alphabot2pi_real_ws
 git clone https://github.com/nestoregon/alphabot2pi_real/
 ```
-2. Change the name to src
+2. Change the name to src. The file downloaded from github has to change its name to src.
 ```
 mv alphabot2pi_real src 
 ```
-3. Import raspicam_node to be able to use the camera. This package enables you to publish a stream video into a topic
+3. Import raspicam_node to be able to use the camera. This package enables you to publish a stream video into a topic. Only used by the Raspberry camera.
 ```
 cd src; git clone https://github.com/UbiquityRobotics/raspicam_node.git; cd ..
 ```
-4. Create build and devel files
+4. Create build and devel files. The following command creates all the necessary build and devel files. This is why you only need to download the src, the other files are automatically generated after the following command
 ```
 catkin_make
 ```
-5. Source the workspace
+5. Source the workspace. To be able to use ```roslaunch``` ```roscd``` or ```rosrun``` the workspace must be sourced. Note: each new terminal window will not be sourced unless you edit the ~/.bashrc file, further details below.
 ```
 source devel/setup.bash
 ```
@@ -33,20 +33,24 @@ source devel/setup.bash
 ```
 cd src/control//src
 ```
-7. Make the code executable
+7. Make the code executable. The code will not work unless it is executable.
 ```
 chmod  +x control_robot_node.py find_ball_blue_node.py servo_node.py drive_node.py remote_node.py
 ```
 Type "ls" on the terminal to confirm that all the code is green! This means that we can run the code.
 
-## ROS master. Configure /.bashrc files
+## Configure /.bashrc files. ROS_MASTER and ROS_URI
 
 To be able to connect the RaspberryPi and the Computer the user must configure both /.bashrc files. This file is launched everytime a new terminal window is open.
 
 The following steps setup the Raspberry as the ROS Master and your computer as a connexion to it. More on how to edit /.bashrc files [here](http://answers.ros.org/question/272065/specification-of-ros_master_uri-and-ros_hostname/)
 
+You will need to know the ip address of your device (Raspberry & computer) in order to proceed. There are 2 ways of doing this:
+* Open the terminal and write ```ip address``` on the Linux device.
+* Use a third party app such as [Fing](https://www.fing.com/) on your mobile device to search for it.
+
 ### 1. Raspberry /.bashrc (from Computer)
-1. Access Raspberry Remotely
+1. Access Raspberry Remotely. Type your raspberry ip address instead.
 
 ```
 ssh ubuntu@ipAddressRaspberry
