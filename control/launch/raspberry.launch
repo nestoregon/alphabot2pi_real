@@ -1,4 +1,5 @@
 <launch>
+  <!-- launches the remote, drive, servo and camera nodes-->
   <arg name="enable_raw" default="false"/>
   <arg name="enable_imv" default="false"/>
   <arg name="camera_id" default="0"/>
@@ -26,4 +27,3 @@
   <node pkg="control" type="servo_node.py" name="servo_node"/>
 
 </launch>
-

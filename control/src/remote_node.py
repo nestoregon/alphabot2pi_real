@@ -5,6 +5,12 @@ import time
 from std_msgs.msg import String
 import RPi.GPIO as GPIO
 
+"""
+Autonomous Robotic Platforms
+Remote Node
+Reference: https://github.com/nestoregon/alphabot2pi_real
+"""
+
 IR = 17
 GPIO.setmode(GPIO.BCM)
 GPIO.setwarnings(False)

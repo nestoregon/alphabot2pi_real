@@ -9,9 +9,11 @@ from geometry_msgs.msg import Point
 from std_msgs.msg import String
 from sensor_msgs.msg import CompressedImage
 
-'''
-find_ball_blue_node.py
-'''
+"""
+Autonomous Robotic Platforms
+Find Ball Node
+Reference: https://github.com/nestoregon/alphabot2pi_real
+"""
 def detectBall(frame):
 	global counter, X, Y, area
 	counter += 1

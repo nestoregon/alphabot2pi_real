@@ -11,6 +11,12 @@ from std_msgs.msg import Float32
 from sensor_msgs.msg import CompressedImage
 import time
 
+"""
+Autonomous Robotic Platforms
+Control Node
+Reference: https://github.com/nestoregon/alphabot2pi_real
+"""
+
 class Control:
     """Control node class"""
     def __init__(self):
@@ -21,6 +27,11 @@ class Control:
         # publishers
         self.pub_cmd_vel = rospy.Publisher("/cmd_vel", Twist, queue_size=5)
         self.pub_servo = rospy.Publisher("/servo_location", Point, queue_size=10)
+        # Possible future implementations
+        self.sub_line_following = rospy.Subscriber("/line_following", Float32, self.callback_line_following)
+        self.sub_collision = rospy.Subscriber("/collision", String, self.callback_collision)
+        self.sub_ball_red = rospy.Subscriber("/ball_red_location", Point, self.callback_red)
+
 
         self.vel = Twist() # Twist object to transfer velocity to wheel
         self.servo = Point() # Point object to transfer location to servo
