@@ -1,7 +1,12 @@
 # Alphabot2pi ROS real
-This is the code used to run AlphaBot2pi using ROS
+This is the code used to run AlphaBot2pi using ROS.
 
 ## Installation
+
+In this section all the necessary steps to install the code are explained.
+
+**NOTE: The installation process has to be carried out in both the Raspberry and the Computer**
+
 Create catkin workspace. Make sure you are in a path where you want your worskpace to be and run the following commands on the terminal.
 ```
 mkdir alphabot2pi_real_ws
