@@ -130,10 +130,8 @@ Use the 3 buttons on the remote to select different tasks for the robot.
 * **Task 2: Ball Following Drive** The robot uses the wheels to follow the blue ball
 * **Task 3: Ball Following Servo** The robot uses the servo to follow the blue ball
 In Modes 2 & 3 the robot follows a blue ball. the find_ball_blue_node.py uses the HSV color system.
-- ![#365FB3](https://placehold.it/15/365FB3/000000?text=+) 
-* `HSV: 220, 70%, 70%`
-* `HEX: 365FB3`
-* `RGB: 54, 95, 179`
+
+![#365FB3](https://placehold.it/15/365FB3/000000?text=+) `HSV: 220, 70%, 70%`, `HEX: 365FB3`, `RGB: 54, 95, 179`
 
 ## Future work
 You can add as many input and output nodes as you like.
