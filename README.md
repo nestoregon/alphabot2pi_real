@@ -55,8 +55,10 @@ Open editor for the /.bashrc file
 ```
 nano ~/.bashrc
 ```
-Write the following at the bottom of the /.bashrc file
+Write the following at the bottom of the /.bashrc file. The first line is to source the workspace (**NOTE: change the path for your own workspace path!**) and the second to stablish the ROS_MASTER and ROS_IP. The Raspberry is the Master in this example. The ROS_IP is the raspberry one because we are working on the raspberry.
 ```
+# Identify the workspace every time the terminal is opened
+source /home/nestoregon/ROS/alphabot2pi_real_ws/devel/setup.bash
 # office
 export ROS_MASTER_URI=http://ipAddressRaspberry:11311
 export ROS_IP=ipAddressRaspberry
@@ -78,8 +80,10 @@ Open editor for the /.bashrc file in a new terminal window
 ```
 nano ~/.bashrc
 ```
-Write the following at the bottom of the /.bashrc file
+Write the following at the bottom of the /.bashrc file. The first line is to source the workspace (**NOTE: change the path for your own workspace path!**) and the second to stablish the ROS_MASTER and ROS_IP. The Raspberry is the Master in this example. The ROS_IP is the computer one because we are working on the computer.
 ```
+# Identify the workspace every time the terminal is opened
+source /home/nestoregon/ROS/alphabot2pi_real_ws/devel/setup.bash
 # office
 export ROS_MASTER_URI=http://ipAddressRaspberry:11311
 export ROS_IP=ipAddressComputer
