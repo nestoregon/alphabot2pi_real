@@ -7,11 +7,14 @@ Create catkin workspace. Make sure you are in a path where you want your worskpa
 mkdir alphabot2pi_real_ws
 cd alphabot2pi_real_ws
 git clone https://github.com/nestoregon/alphabot2pi_real/
-git clone https://github.com/UbiquityRobotics/raspicam_node.git
 ```
 Change the name to src
 ```
 mv alphabot2pi_real src 
+```
+Import raspicam_node to be able to use the camera. This package enables you to publish a stream video into a topic
+```
+cd src; git clone https://github.com/UbiquityRobotics/raspicam_node.git; cd ..
 ```
 Create build and devel files
 ```
