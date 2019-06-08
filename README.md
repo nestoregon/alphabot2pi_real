@@ -110,11 +110,20 @@ Firstly, ssh into the Raspberry and run:
 ```
 roslaunch control raspberry.launch
 ```
-Secondly, run the following command in your computer
+There are 2 ways of running the code in the computer. The computer is in charge of only 2 nodes: control_robot_node.py and find_ball_blue_node.py.
+* Option 1: both nodes are launched at the same time, no results nor images can be seen
 ```
 roslaunch control computer.launch
 ```
-
+* Option 2: each node is launched independently in a different terminal window. This allows the user to see the internal processes of each node. Run both commands in two separe terminal windows.
+When the find_ball_blue_node.py is launched independently, the user is able to see the images and masks. 
+``` 
+rosrun control find_ball_blue_node.py
+```
+When the control_robot_node.py is launched independently, the user is able to see the direction of the robot and each mode selected
+```
+rosrun control control_robot_node.py
+```
 ## Instructions
 Use the 3 buttons on the remote to select different tasks for the robot
 * **Task 1: Manual Mode** Use the keys to manually control the robot
