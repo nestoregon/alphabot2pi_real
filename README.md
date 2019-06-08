@@ -1,4 +1,4 @@
-# alphabot2pi ROS real
+# Alphabot2pi ROS real
 This is the code used to run AlphaBot2pi using ROS
 
 ## Installation
