@@ -92,11 +92,11 @@ Run the following commands to launch the whole ROS network. As mentioned above, 
 
 Firstly, ssh into the Raspberry and run:
 ```
-roslaunch control computer.launch
+roslaunch control raspberry.launch
 ```
 Secondly, run the following command in your computer
 ```
-roslaunch control raspberry.launch
+roslaunch control computer.launch
 ```
 
 ## Instructions
