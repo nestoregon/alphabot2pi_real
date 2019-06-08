@@ -7,33 +7,33 @@ In this section all the necessary steps to install the code are explained.
 
 **NOTE: The installation process has to be carried out in both the Raspberry and the Computer**
 
-Create catkin workspace. Make sure you are in a path where you want your worskpace to be and run the following commands on the terminal.
+1. Create catkin workspace. Make sure you are in a path where you want your worskpace to be and run the following commands on the terminal.
 ```
 mkdir alphabot2pi_real_ws
 cd alphabot2pi_real_ws
 git clone https://github.com/nestoregon/alphabot2pi_real/
 ```
-Change the name to src
+2. Change the name to src
 ```
 mv alphabot2pi_real src 
 ```
-Import raspicam_node to be able to use the camera. This package enables you to publish a stream video into a topic
+3. Import raspicam_node to be able to use the camera. This package enables you to publish a stream video into a topic
 ```
 cd src; git clone https://github.com/UbiquityRobotics/raspicam_node.git; cd ..
 ```
-Create build and devel files
+4. Create build and devel files
 ```
 catkin_make
 ```
-Source the workspace
+5. Source the workspace
 ```
 source devel/setup.bash
 ```
-Go to the directory with control nodes
+6. Go to the directory with control nodes
 ```
 cd src/control//src
 ```
-Make the code executable
+7. Make the code executable
 ```
 chmod  +x control_robot_node.py find_ball_blue_node.py servo_node.py drive_node.py remote_node.py
 ```
@@ -46,16 +46,16 @@ To be able to connect the RaspberryPi and the Computer the user must configure b
 The following steps setup the Raspberry as the ROS Master and your computer as a connexion to it. More on how to edit /.bashrc files [here](http://answers.ros.org/question/272065/specification-of-ros_master_uri-and-ros_hostname/)
 
 ### 1. Raspberry /.bashrc (from Computer)
-Access Raspberry Remotely
+1. Access Raspberry Remotely
 
 ```
 ssh ubuntu@ipAddressRaspberry
 ```
-Open editor for the /.bashrc file
+2. Open editor for the /.bashrc file
 ```
 nano ~/.bashrc
 ```
-Write the following at the bottom of the /.bashrc file. The first line is to source the workspace (**NOTE: change the path for your own workspace path!**) and the second to stablish the ROS_MASTER and ROS_IP. The Raspberry is the Master in this example. The ROS_IP is the raspberry one because we are working on the raspberry.
+3. Write the following at the bottom of the /.bashrc file. The first line is to source the workspace (**NOTE: change the path for your own workspace path!**) and the second to stablish the ROS_MASTER and ROS_IP. The Raspberry is the Master in this example. The ROS_IP is the raspberry one because we are working on the raspberry.
 ```
 # Identify the workspace every time the terminal is opened
 source /home/nestoregon/ROS/alphabot2pi_real_ws/devel/setup.bash
@@ -63,24 +63,24 @@ source /home/nestoregon/ROS/alphabot2pi_real_ws/devel/setup.bash
 export ROS_MASTER_URI=http://ipAddressRaspberry:11311
 export ROS_IP=ipAddressRaspberry
 ```
-Save changes
+4. Save changes
 ```
 Ctrl + x
 y
 Enter
 ```
-Run /.bashrc file again to update changes
+5. Run /.bashrc file again to update changes
 ```
 source ~/.bashrc
 ```
 
 ### 2. Computer /.bashrc (from Computer)
 
-Open editor for the /.bashrc file in a new terminal window
+1. Open editor for the /.bashrc file in a new terminal window
 ```
 nano ~/.bashrc
 ```
-Write the following at the bottom of the /.bashrc file. The first line is to source the workspace (**NOTE: change the path for your own workspace path!**) and the second to stablish the ROS_MASTER and ROS_IP. The Raspberry is the Master in this example. The ROS_IP is the computer one because we are working on the computer.
+2. Write the following at the bottom of the /.bashrc file. The first line is to source the workspace (**NOTE: change the path for your own workspace path!**) and the second to stablish the ROS_MASTER and ROS_IP. The Raspberry is the Master in this example. The ROS_IP is the computer one because we are working on the computer.
 ```
 # Identify the workspace every time the terminal is opened
 source /home/nestoregon/ROS/alphabot2pi_real_ws/devel/setup.bash
@@ -88,13 +88,13 @@ source /home/nestoregon/ROS/alphabot2pi_real_ws/devel/setup.bash
 export ROS_MASTER_URI=http://ipAddressRaspberry:11311
 export ROS_IP=ipAddressComputer
 ```
-Save changes
+3. Save changes
 ```
 Ctrl + x
 y
 Enter
 ```
-Run /.bashrc file again to update changes
+4. Run /.bashrc file again to update changes
 ```
 source ~/.bashrc
 ```
