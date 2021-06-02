@@ -145,4 +145,3 @@ You can add as many input and output nodes as you like.
 ## Authors
 
 * **Nestor Morales** - *Control Code and Gazebo Simulation* - [nestoregon](https://github.com/nestoregon)
-* **Manuel Serrano** - *Control Code and Gazebo Simulation*
