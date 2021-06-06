@@ -109,3 +109,5 @@ if __name__ == '__main__':
 	# Publish x-y coordinates over ball_location topic
 	pub_point = rospy.Publisher('/ball_blue_location', Point, queue_size=5)
 	rospy.spin()
+
+	
