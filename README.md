@@ -142,6 +142,6 @@ You can add as many input and output nodes as you like.
 * Modify the remote_node.py node to set new keys and publish new topics
 * Modify the find_ball_blue_node.py to set new values for different colors to find
 
-## Authors
+## Author
 
 * **Nestor Morales** - *Control Code and Gazebo Simulation* - [nestoregon](https://github.com/nestoregon)
